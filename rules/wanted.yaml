@@ -1,0 +1,20 @@
+__praeco_full_path: wanted
+alert:
+  - email
+email:
+  - youremail@example.com
+filter:
+  - query:
+      query_string:
+        query: 'response: 20*'
+import: BaseRule.config
+index: logstash-*
+is_enabled: true
+name: wanted
+terms_size: 50
+threshold: 1
+timeframe:
+  minutes: 30
+timestamp_type: iso
+type: flatline
+use_strftime_index: false
